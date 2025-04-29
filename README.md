@@ -14,13 +14,29 @@ To write a program to prepare EMI calculator using function without return type 
 6.	Stop the program.
 
 ## PROGRAM
-
+```c
+#include <stdio.h>
+#include <math.h>
+float emic(float, float, float);
+int main()
+{
+    float p,r,t;
+    scanf("%f %f %f",&p,&r,&t);
+    printf("Monthly EMI is= %.3f",emic(p,r,t));
+}
+float emic(float p, float r, float t)
+{
+    float rate = r / (12*100);
+    float time = t * 12;
+    float emi;
+    emi = (p * rate * pow(1+rate,time))/(pow(1+rate,time)-1);
+    return emi;
+}
+```                 
 
 ## OUTPUT
 
-
-
-
+![Screenshot_29-4-2025_81740_training saveetha in](https://github.com/user-attachments/assets/92489c34-6736-4bdb-9038-79f111d39bf1)
 
 ## RESULT
 
@@ -43,15 +59,28 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main() 
+{
+    int n1=0,n2=1,n3,terms,i;
+    printf("Enter the number of terms:\n");
+    scanf(" %d",&terms);
+    printf("The %d terms of fibonacci series are:\n",terms);
+    printf("%d %d ",n1,n2);
+    for (i=2;i<terms;i++)
+    {
+        n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
+        printf("%d ",n1);
+    }
+}
+```
 
 ## OUTPUT
 
-
-
-
-
-
-
+![Screenshot_29-4-2025_82333_www programiz com](https://github.com/user-attachments/assets/5b927f60-a91f-498b-af9b-567908045a15)
 
 ## RESULT
 Thus the program to generate the Fibonacci series for the value 6 has been executed successfully.
@@ -71,16 +100,26 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main()
+{
+    int n,i;
+    printf("Enter no. of values needed\n");
+    scanf(" %d",&n);
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (i=0;i<n;i++)
+    {
+        scanf(" %d",&arr[i]);
+    }
+    printf("The last element of the array is: %d",arr[n-1]);
+}
+```
 
 ## OUTPUT
 
-
-
-
-
-
-
-
+![Screenshot_29-4-2025_83110_www programiz com](https://github.com/user-attachments/assets/f8940a46-3203-41ea-90f5-c7a07442c730)
 
 ## RESULT
 Thus the program to read n elements as input and print the last element of the array has been executed successfully.
@@ -96,18 +135,37 @@ To write a C Program to count total number of positive elements in an array.
 1.	Start the program.
 2.	Read a variable.
 3.	Read the array values n number of times.
-4.	If the array value can be divided by 2 then increment count by 1.
+4.	If the array value is greater than 0 then increment count by 1.
 5.	Display result.
 6.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main()
+{
+    int n,i,count=0;
+    printf("Enter no. of values needed\n");
+    scanf(" %d",&n);
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (i=0;i<n;i++)
+    {
+        scanf(" %d",&arr[i]);
+    }
+    for (i=0;i<n;i++)
+    {
+        if (arr[i] > 0)
+            count += 1;
+    }
+    printf("The total number of positive numbers in the array is %d",count);
+}
+```
 
 
 ## OUTPUT
 
-
-
-
+![Screenshot_29-4-2025_83851_www programiz com](https://github.com/user-attachments/assets/aa9ea0c0-1295-44ae-b2e0-f47dfe4c2cc1)
 
 ## RESULT
 Thus the program to count total number of positive elements in an array has been executed successfully.
@@ -137,9 +195,42 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
+```c
+#include <stdio.h>
+int main()
+{
+    int n,i,count=0;
+    printf("Enter no. of values needed\n");
+    scanf(" %d",&n);
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (i=0;i<n;i++)
+    {
+        scanf(" %d",&arr[i]);
+    }
+    for (i=0;i<n;i++)
+    {
+        if (arr[i] % 2 == 0)
+            arr[i] = 'E';
+    }
+    printf("The updated array is:\n");
+    for (i = 0; i < n; i++)
+    {
+        if (arr[i] == 'E') 
+        {
+            printf("%c ", arr[i]); 
+        } 
+        else 
+        {
+            printf("%d ", arr[i]);
+        }
+    }
+}
+```
 
 ## Output:
  
+![Screenshot_29-4-2025_84848_www programiz com](https://github.com/user-attachments/assets/9ed84482-5e17-4eef-a1d5-923fdb184412)
 
 
 ## Result:
