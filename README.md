@@ -73,14 +73,15 @@ int main()
         n3 = n1 + n2;
         n1 = n2;
         n2 = n3;
-        printf("%d ",n1);
+        printf("%d ",n3);
     }
 }
 ```
 
 ## OUTPUT
 
-![Screenshot_29-4-2025_82333_www programiz com](https://github.com/user-attachments/assets/5b927f60-a91f-498b-af9b-567908045a15)
+![image](https://github.com/user-attachments/assets/15713efa-7e10-4f6f-ae1c-4a5ba4281a36)
+
 
 ## RESULT
 Thus the program to generate the Fibonacci series for the value 6 has been executed successfully.
